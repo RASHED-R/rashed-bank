@@ -1,0 +1,103 @@
+/* ***Responsive media query*** */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1500px) and (max-width:1800px) {}
+
+@media (min-width: 1200px) and (max-width:1500px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu-list {
+        display: none;
+    }
+
+    li.nav-itme {
+        display: block;
+    }
+
+}
+
+/* Extra small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    ul.nav-ul.scroll {
+        display: none;
+    }
+
+    .nav-menu-ul.scroll {
+        display: block;
+    }
+
+    .hamburger.scroll {
+        display: block;
+    }
+
+    .hamburger.main {
+        display: block;
+    }
+
+    .nav-menu-list {
+        display: none;
+    }
+
+    .nav-menu-ul.main {
+        display: block;
+    }
+
+    li.nav-itme {
+        display: block;
+    }
+
+
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 481px) and (max-width: 595px) {
+    .logo img {
+        width: 65%;
+    }
+
+    .title {
+        padding: 63px 0;
+    }
+
+    .title h1 {
+        font-size: 30px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+    }
+
+    .title h4 {
+        letter-spacing: 2px;
+        font-size: 22px;
+    }
+
+    .title h6 {
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+
+    .butn {
+        padding: 6px 15px;
+    }
+
+    .butn span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 60%;
+    }
+}
