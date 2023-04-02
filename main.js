@@ -38,4 +38,52 @@ function scrollFunction() {
         position.classList.remove("is-sticky");
 
     }
+};
+
+
+//event handler for login section
+let loginBtn = document.getElementById("login-btn").addEventListener("click", () => {
+    let loginArea = document.querySelector(".login-area")
+    loginArea.style.display = "none";
+    // let transectionArea = document.querySelector("#transection-area");
+    // transectionArea.style.display = "block";
+    // let transectionWrapper = document.querySelector("#transection-wrapper");
+    // transectionWrapper.style.display = "block";
+    myFunction("transection-area");
+    myFunction("transection-wrapper");
+});
+
+function myFunction(id) {
+    let x = document.getElementById(id);
+    x.style.display = "block";
+}
+//event handler for deposit/withdraw section
+let depositBtn = document.getElementById("addDeposit").addEventListener("click", () => {
+    // let depositAmount = document.getElementById("depositAmount").value;
+    // let depositNumber = parseFloat(depositAmount);
+    let depositNumber = getInoutNumber("depositAmount");
+
+    updateSpanText("currentBalance", depositNumber);
+    updateSpanText("currentDeposit", depositNumber);
+    document.getElementById("depositAmount").value = "";
+
+});
+//withdraw handler
+const withdrawBtn = document.getElementById("withdraw").addEventListener("click", () => {
+    let withdrawNumber = getInoutNumber("withdrawAmount");
+    document.getElementById("depositAmount").value = "";
+    console.log(withdrawNumber);
+});
+
+function getInoutNumber(id) {
+    let Amount = document.getElementById(id).value;
+    let amountNumber = parseFloat(Amount);
+    return amountNumber;
+}
+
+function updateSpanText(id, depositNumber) {
+    const current = document.getElementById(id).innerText;
+    const currentNumber = parseFloat(current);
+    const totalAmount = depositNumber + currentNumber;
+    document.getElementById(id).innerText = totalAmount;
 }
